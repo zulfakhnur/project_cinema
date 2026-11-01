@@ -43,16 +43,13 @@ if (isset($_GET["edit"])) {
 }
 
 $films = $modelFilm->semua();
-
 $judul = "Admin - Kelola Film";
 
 require "header.php";
 ?>
 
 <div class="admin-layout">
-
     <aside class="admin-sidebar">
-
         <h3>BioskopKu Admin</h3>
 
         <a href="admin.php" class="selected">
@@ -63,9 +60,7 @@ require "header.php";
             Kelola Jadwal
         </a>
 
-        <a href="tiket.php">
-            Data Pemesanan
-        </a>
+        <a href="admin_pemesanan.php">Data Pemesanan</a>
 
         <a href="keluar.php">
             Keluar

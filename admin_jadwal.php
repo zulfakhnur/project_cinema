@@ -57,7 +57,7 @@ require "header.php";
 
         <a href="admin.php">Kelola Film</a>
         <a href="admin_jadwal.php" class="selected">Kelola Jadwal</a>
-        <a href="tiket.php">Data Pemesanan</a>
+        <a href="admin_pemesanan.php">Data Pemesanan</a>
         <a href="keluar.php">Keluar</a>
 
     </aside>
