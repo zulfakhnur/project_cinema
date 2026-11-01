@@ -83,5 +83,25 @@ class Film {
             throw new Exception("Durasi harus lebih dari 0.");
         }
     }
+
+    public function unggahPoster($file) {
+        if ($file["error"] !== UPLOAD_ERR_OK) {
+            throw new Exception("Upload poster gagal.");
+        }
+
+        if ($file["size"] > 2 * 1024 * 1024) {
+            throw new Exception("Ukuran poster maksimal 2 MB.");
+        }
+
+        $ext = strtolower(pathinfo($file["name"], PATHINFO_EXTENSION));
+
+        if (!in_array($ext, ["jpg", "jpeg", "png", "webp"])) {
+            throw new Exception("Poster harus berformat JPG, PNG, atau WEBP.");
+        }
+
+        $nama = uniqid("poster_") . "." . $ext;
+        move_uploaded_file($file["tmp_name"], __DIR__ . "/../img/" . $nama);
+        return $nama;
+    }
 }
 ?>
