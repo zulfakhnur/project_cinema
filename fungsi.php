@@ -15,6 +15,13 @@ $modelUser = new User($pdo);
 $modelJadwal = new Timetable($pdo);
 $modelBooking = new Booking($pdo);
 
+function posterIsi($nilai) {
+    if (strpos((string)$nilai, "poster-") === 0) {
+        return "<span>POSTER</span>";
+    }
+    return '<img src="img/' . e($nilai) . '" alt="Poster film">';
+}
+
 function e($teks) {
     return htmlspecialchars(
         (string)$teks,
