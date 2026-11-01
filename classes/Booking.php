@@ -125,4 +125,32 @@ class Booking {
             throw $e;
         }
     }
+
+    public function semua() {
+        return $this->db->query(
+            "SELECT b.id AS id_pemesanan,
+                    b.booking_code AS kode_booking,
+                    b.total_price AS total,
+                    CASE b.status
+                        WHEN 'paid' THEN 'LUNAS'
+                        WHEN 'cancelled' THEN 'BATAL'
+                        ELSE 'PENDING'
+                    END AS status,
+                    u.name AS pemesan,
+                    f.title AS judul,
+                    s.name AS studio,
+                    t.show_date AS tanggal,
+                    TIME_FORMAT(t.show_time, '%H:%i') AS jam,
+                    GROUP_CONCAT(st.seat_code ORDER BY st.seat_code SEPARATOR ', ') AS kursi
+            FROM bookings b
+            JOIN users u ON b.user_id = u.id
+            JOIN timetables t ON b.timetable_id = t.id
+            JOIN films f ON t.film_id = f.id
+            JOIN studios s ON t.studio_id = s.id
+            LEFT JOIN booking_details d ON d.booking_id = b.id
+            LEFT JOIN seats st ON d.seat_id = st.id
+            GROUP BY b.id
+            ORDER BY b.id DESC"
+        )->fetchAll();
+    }
 }
