@@ -17,17 +17,13 @@ require "header.php";
 ?>
 
 <section class="detail-layout">
-
     <div class="detail-poster poster <?= e($film["warna"]) ?>">
-        <span>POSTER</span>
+        <?= posterIsi($film["warna"]) ?>
     </div>
 
     <div class="detail-content">
-
         <p class="eyebrow">DETAIL FILM</p>
-
         <h1><?= e($film["judul"]) ?></h1>
-
         <p class="muted">
             <?= e($film["genre"]) ?>
             · <?= (int)$film["durasi"] ?> menit
@@ -39,13 +35,9 @@ require "header.php";
         </p>
 
         <h3>Pilih Jadwal</h3>
-
         <div class="schedule-list">
-
             <?php foreach ($jadwal as $j): ?>
-
                 <div class="schedule-card">
-
                     <div>
                         <strong>
                             <?= date("D, d M", strtotime($j["tanggal"])) ?>
@@ -59,34 +51,23 @@ require "header.php";
                     </div>
 
                     <div class="schedule-price">
-
                         <?= $modelJadwal->rupiah($j["harga"]) ?>
-
                     </div>
 
                     <a href="kursi.php?id_jadwal=<?= $j["id_jadwal"] ?>"
                         class="btn">
-
                         Pilih Kursi
-
                     </a>
-
                 </div>
-
             <?php endforeach; ?>
-
         </div>
 
         <?php if (!$jadwal): ?>
-
             <p class="empty">
                 Belum ada jadwal tersedia.
             </p>
-
         <?php endif; ?>
-
     </div>
-
 </section>
 
 <?php require "footer.php"; ?>
