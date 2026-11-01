@@ -15,7 +15,7 @@ if (session_status() === PHP_SESSION_NONE) {
         <?= isset($judul) ? e($judul) : "Cinemora" ?>
     </title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=<?= filemtime(__DIR__ . "/style.css") ?>">
 </head>
 
 <body>

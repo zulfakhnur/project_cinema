@@ -692,5 +692,26 @@ th {
     .ticket-card {
         align-items: flex-start;
     }
+}
 
+.poster img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.film-card .poster,
+.detail-poster {
+    height: auto;
+    aspect-ratio: 2 / 3;
+}
+
+.admin-layout > *,
+.booking-layout > *,
+.detail-layout > * {
+    min-width: 0;
 }
