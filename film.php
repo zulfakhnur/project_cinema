@@ -1,7 +1,7 @@
 <?php
 require_once "fungsi.php";
 
-$judul = "Semua Film - BioskopKu";
+$judul = "Semua Film - Cinemora";
 $genre = $_GET["genre"] ?? "";
 
 $films = $modelFilm->semua($genre);
@@ -11,7 +11,7 @@ require "header.php";
 ?>
 
 <div class="page-title">
-    <p class="eyebrow">KOLEKSI BIOSKOPKU</p>
+    <p class="eyebrow">KOLEKSI CINEMORA</p>
     <h1>Semua Film</h1>
 </div>
 

@@ -2,7 +2,7 @@
 
 <footer class="footer">
 
-    BioskopKu &copy; <?= date("Y") ?>
+    Cinemora &copy; <?= date("Y") ?>
 
     — Pesan tiket film dengan mudah.
 

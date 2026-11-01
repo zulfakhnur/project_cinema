@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-$judul = "Daftar - BioskopKu";
+$judul = "Daftar - Cinemora";
 
 require "header.php";
 ?>

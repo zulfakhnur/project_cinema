@@ -1,7 +1,7 @@
 <?php
 require_once "fungsi.php";
 
-$judul = "Beranda - BioskopKu";
+$judul = "Beranda - Cinemora";
 $films = $modelFilm->semua("", "now_showing");
 
 require "header.php";
@@ -9,7 +9,7 @@ require "header.php";
 
 <section class="hero">
     <div>
-        <p class="eyebrow">SELAMAT DATANG DI BIOSKOPKU</p>
+        <p class="eyebrow">SELAMAT DATANG DI CINEMORA</p>
 
         <h1>
             Pilih film, pilih kursi,
@@ -27,7 +27,7 @@ require "header.php";
     </div>
 
     <div class="hero-poster poster poster-red">
-        <span>BIOSKOPKU</span>
+        <span>CINEMORA</span>
     </div>
 </section>
 

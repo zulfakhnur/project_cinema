@@ -11,7 +11,7 @@ if (!$film) {
 
 $jadwal = $modelJadwal->milikFilm($id);
 
-$judul = "Detail Film - BioskopKu";
+$judul = "Detail Film - Cinemora";
 
 require "header.php";
 ?>

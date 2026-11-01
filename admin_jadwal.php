@@ -53,7 +53,7 @@ require "header.php";
 
     <aside class="admin-sidebar">
 
-        <h3>BioskopKu Admin</h3>
+        <h3>Cinemora Admin</h3>
 
         <a href="admin.php">Kelola Film</a>
         <a href="admin_jadwal.php" class="selected">Kelola Jadwal</a>

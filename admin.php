@@ -55,7 +55,7 @@ require "header.php";
 
 <div class="admin-layout">
     <aside class="admin-sidebar">
-        <h3>BioskopKu Admin</h3>
+        <h3>Cinemora Admin</h3>
 
         <a href="admin.php" class="selected">
             Kelola Film

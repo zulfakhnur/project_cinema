@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 }
 
-$judul = "Pilih Kursi - BioskopKu";
+$judul = "Pilih Kursi - Cinemora";
 
 require "header.php";
 ?>

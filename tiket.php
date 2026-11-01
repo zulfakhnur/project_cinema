@@ -13,7 +13,7 @@ if (isset($_GET["batal"])) {
 
 $tickets = $modelBooking->milikUser($idUser);
 
-$judul = "Tiket Saya - BioskopKu";
+$judul = "Tiket Saya - Cinemora";
 
 require "header.php";
 ?>

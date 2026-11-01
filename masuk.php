@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $error = "Email atau password salah.";
 }
 
-$judul = "Masuk - BioskopKu";
+$judul = "Masuk - Cinemora";
 
 require "header.php";
 ?>
