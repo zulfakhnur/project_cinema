@@ -26,9 +26,12 @@ require "header.php";
         </a>
     </div>
 
-    <div class="hero-poster poster poster-red">
-        <span>CINEMORA</span>
-    </div>
+        <?php if ($films): ?>
+        <a href="detail.php?id=<?= $films[0]["id_film"] ?>"
+            class="hero-poster poster <?= e($films[0]["warna"]) ?>">
+            <?= posterIsi($films[0]["warna"]) ?>
+        </a>
+    <?php endif; ?>
 </section>
 
 <div class="section-heading">
